@@ -36,7 +36,7 @@ export class PlaylistService {
             videos: res.items.map((item: any) => {
               return {
                 id: item.snippet.resourceId.videoId,
-                publishedAt: new Date(item.snippet.resourceId.publishedAt),
+                publishedAt: new Date(item.snippet.publishedAt),
                 title: item.snippet.title,
                 description: item.snippet.description,
                 imgURL: item.snippet.thumbnails.medium.url,

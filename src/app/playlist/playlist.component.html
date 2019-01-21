@@ -26,7 +26,15 @@
         <a [href]=" 'https://www.youtube.com/watch?v=' + item.id" target="_blank">
           <figure class="figure">
             <img [src]="item.imgURL" class="figure-img img-fluid rounded" alt="desc">
-            <figcaption class="figure-caption">{{playList.title}}</figcaption>
+            <figcaption class="figure-caption">
+              <p class="mt-1 mb-1">
+                <small>
+                  <i class="far fa-calendar"></i>
+                  {{item.publishedAt | date: format}}
+                </small>
+              </p>
+              {{item.title}}
+            </figcaption>
           </figure>
         </a>
       </div>
