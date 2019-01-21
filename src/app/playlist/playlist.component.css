@@ -1,0 +1,22 @@
+.title{
+    background-color: #2d2d2d;
+    color: white;
+    border-radius: 4px;
+}
+
+.figure{
+    padding: 10px;
+    border-radius: 4px;
+}
+.figure:hover{
+    background-color: #eaeaea;
+    cursor: pointer;
+}
+
+h3{
+    padding: .5em;
+}
+
+h3.finding{
+    min-height: 300px;
+}

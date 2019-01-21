@@ -1,0 +1,56 @@
+<div class="row mt-4">
+  <div class="col-12">
+    <div class="row title">
+      <div class="col-12 col-md-8">
+        <h3 class="ellipsis">
+          <i class="fas fa-key"></i>
+          {{playList.id}}
+        </h3>
+      </div>
+      <div class="col-12 col-md-4 text-center">
+        <h3>
+          <span class="mr-4">
+            <i class="fas fa-file-alt"></i>
+            {{playList.actual}} / {{playList.pages}}
+          </span>
+          {{playList.total}}
+          results
+        </h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-12 mt-4">
+    <div *ngIf="!finding" class="row justify-content-around">
+      <div *ngFor="let item of playList.videos" class="col-12 col-md-4 col-bg-3">
+        <a [href]=" 'https://www.youtube.com/watch?v=' + item.id" target="_blank">
+          <figure class="figure">
+            <img [src]="item.imgURL" class="figure-img img-fluid rounded" alt="desc">
+            <figcaption class="figure-caption">{{playList.title}}</figcaption>
+          </figure>
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <h3 *ngIf="finding" class="finding text-center">
+          Finding <i class="fas fa-spinner fa-spin"></i>
+        </h3>
+        <h3 *ngIf="error">
+          Error moving page
+        </h3>
+      </div>
+    </div>
+    <div class="col-12 mt-4">
+      <nav aria-label="...">
+        <ul class="pagination justify-content-center">
+          <li class="page-item" [class.disabled]="playList.prevPageToken == null">
+            <a class="page-link" (click)="movePage(PageDirection.PREVIOUS)">Previous</a>
+          </li>
+          <li class="page-item" [class.disabled]="playList.nextPageToken == null">
+            <a class="page-link" (click)="movePage(PageDirection.NEXT)">Next</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>

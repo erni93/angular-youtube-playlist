@@ -1,0 +1,16 @@
+<div class="row mt-4">
+  <div class="col-12 text-center">
+    <h1><i class="fas fa-search"></i> Search a playlist</h1>
+  </div>
+  <div class="col-12 form-group" [formGroup]="form">
+    <input formControlName="id" type="search" class="form-control form-control-lg" placeholder="Playlist ID">
+  </div>
+  <div class="col-12 form-group" [formGroup]="form">
+    <h3 *ngIf="finding">
+      Finding <i class="fas fa-spinner fa-spin"></i>
+    </h3>
+    <h3 *ngIf="error">
+      Error, invalid ID
+    </h3>
+  </div>
+</div>

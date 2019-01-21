@@ -1,0 +1,4 @@
+<div class="container">
+  <app-search (newPlayList)="playList = $event"></app-search>
+  <app-playlist [playList]="playList" *ngIf="playList != null"></app-playlist>
+</div>

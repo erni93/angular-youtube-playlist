@@ -23,6 +23,8 @@
               "src/assets"
             ],
             "styles": [
+              "src/lib/bootstrap.min.css",
+              "src/lib/fontawesome/css/all.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -79,6 +81,8 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
+              "src/lib/bootstrap.min.css",
+              "src/lib/fontawesome/css/all.min.css",
               "src/styles.css"
             ],
             "scripts": [],
